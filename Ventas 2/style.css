@@ -1,0 +1,304 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y fuente del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6 25%, #ffb6c1 75%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Títulos principales */
+h1, h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Estilo de las secciones */
+.section {
+    background-color: #ffb6c1; /* Color salmón suave */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.section:hover {
+    background-color: #ff8da0; /* Efecto hover para cambiar color */
+}
+
+/* Inputs y botones */
+input[type="text"],
+input[type="number"],
+select,
+button {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+button:hover {
+    border-color: #ff69b4; /* Resaltado de bordes */
+    background-color: #fff;
+    outline: none;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estilo de las listas de productos */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Listado de productos */
+li {
+    background-color: #f1f1f1;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la imagen del producto */
+li img {
+    width: 50px; /* Tamaño de la imagen */
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    margin-right: 15px; /* Espacio entre la imagen y el resto de los datos */
+}
+
+/* Información del producto */
+li .product-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para los botones de eliminar */
+li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #e53935;
+}
+
+/* Elementos de reportes financieros */
+#totalVentas,
+#gananciasTotales,
+#totalGastos,
+#balance {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo para imagen de producto */
+.imagenProducto {
+  width: 50px;              /* Ancho de la imagen */
+  height: 50px;             /* Alto de la imagen */
+  object-fit: cover;        /* Ajuste de la imagen */
+  border-radius: 5px;       /* Bordes redondeados */
+  margin-right: 10px;       /* Espaciado con el texto */
+  border: 1px solid #ccc;   /* Borde opcional */
+}
+
+/* Producto listado */
+.producto {
+  display: flex;            /* Diseño flexible */
+  align-items: center;      /* Centrado vertical */
+  margin-bottom: 10px;      /* Espaciado entre productos */
+}
+
+/* Botón eliminar producto */
+.btnEliminar {
+  margin-left: auto;        /* Empujar botón hacia el final */
+  background-color: #f44336; /* Rojo para eliminar */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnEliminar:hover {
+  background-color: #d32f2f; /* Color más oscuro al pasar el cursor */
+}
+
+/* Botón de stock */
+.btnStock {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #f0ad4e;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnStock:hover {
+  background-color: #ec971f;
+}
+
+/* Contenedor del historial */
+.historial-container {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 20px; /* Margen superior */
+    max-width: 800px; /* Máximo ancho */
+    width: 100%; /* Asegura que sea responsive */
+    margin-left: auto; /* Centrado automático */
+    margin-right: auto; /* Centrado automático */
+    text-align: center; /* Texto centrado */
+}
+
+/* Título del historial */
+.historial-container h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    color: #333; /* Color oscuro */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilo para la lista de reportes */
+#historialReportes {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos individuales de los reportes */
+#historialReportes li {
+    background-color: #ffffff; /* Fondo blanco */
+    margin-bottom: 10px; /* Espacio entre elementos */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: flex; /* Flexbox para alinear los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical */
+    transition: transform 0.3s ease; /* Transición al pasar el mouse */
+}
+
+#historialReportes li:hover {
+    transform: scale(1.03); /* Aumento al pasar el ratón */
+    background-color: #f5f5f5; /* Cambio de color al pasar el ratón */
+}
+
+/* Información del reporte */
+#historialReportes li .reporte-info {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    gap: 5px; /* Espacio entre los elementos */
+    text-align: left; /* Alineación a la izquierda */
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+/* Estilo de los textos dentro del reporte */
+#historialReportes li .reporte-info span {
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    font-weight: 500; /* Peso del texto */
+}
+
+/* Botón de detalles */
+#historialReportes li .btnDetalles {
+    background-color: #007bff; /* Color azul */
+    color: white; /* Texto blanco */
+    padding: 8px 12px; /* Espaciado del botón */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+#historialReportes li .btnDetalles:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}

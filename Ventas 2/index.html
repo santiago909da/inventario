@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos y Finanzas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- CDN de Chart.js -->
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Productos y Finanzas</h1>
+
+        <!-- Formulario de Ventas -->
+        <div class="section">
+            <h2>Registrar Venta</h2>
+            <select id="productoSeleccionado">
+                <option value="">Seleccionar Producto</option>
+            </select>
+            <input type="number" id="cantidadVendida" placeholder="Cantidad Vendida">
+            <button id="btnRegistrarVenta">Registrar Venta</button>
+        </div>
+
+        <!-- Formulario de Productos -->
+        <div class="section">
+            <h2>Agregar Producto</h2>
+            <input type="text" id="nombreProducto" placeholder="Nombre del Producto">
+            <input type="number" id="precioProducto" placeholder="Precio">
+            <input type="number" id="costoProducto" placeholder="Costo">
+            <input type="number" id="stockProducto" placeholder="Stock">
+            <input type="text" id="urlImagenProducto" placeholder="URL de la imagen">
+            <button id="btnAgregarProducto">Agregar Producto</button>
+        </div>
+
+        <!-- Lista de Productos -->
+        <div class="section">
+            <h2>Productos Listados</h2>
+            <ul id="productosListados"></ul>
+        </div>
+
+        <!-- Formulario de Gastos -->
+        <div class="section">
+            <h2>Agregar Gasto</h2>
+            <input type="number" id="gasto" placeholder="Monto del Gasto">
+            <input type="text" id="descripcionGasto" placeholder="Descripción del Gasto">
+            <button id="btnAgregarGasto">Agregar Gasto</button>
+        </div>
+
+        <!-- Gastos Registrados -->
+        <div class="section">
+            <h2>Gastos Registrados</h2>
+            <ul id="gastosListados"></ul>
+        </div>
+
+        <!-- Reporte Financiero -->
+        <div class="section">
+            <h2>Reporte Financiero</h2>
+            <p id="totalVentas">Total Ventas: $0.00</p>
+            <p id="gananciasTotales">Ganancias Totales: $0.00</p>
+            <p id="totalGastos">Total Gastos: $0.00</p>
+            <p id="balance">Balance: $0.00</p>
+            <button onclick="eliminarReporte()">Eliminar Reporte Financiero</button>
+        </div>
+
+        <!-- Historial de Reportes Financieros -->
+        <div class="section">
+            <h2>Historial de Reportes Financieros</h2>
+            <ul id="historialReportes"></ul>
+        </div>
+
+        <!-- Gráficos Historial de Reportes Financieros -->
+        <div class="section">
+            <h2>Gráfico: Balance Financiero</h2>
+            <canvas id="balanceChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script src="graficos.js"></script>
+</body>
+</html>
